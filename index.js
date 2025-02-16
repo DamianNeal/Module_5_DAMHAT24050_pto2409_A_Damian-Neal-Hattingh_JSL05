@@ -1,4 +1,4 @@
-// 1️⃣ Expanded Songs Array (Same songs, but now we control the output properly)
+// Expanded Songs Array (Same songs, but now we control the output properly)
 const songs = [
     { title: "Hooked on a Feeling", artist: "Blue Swede", genre: "Pop" },
     { title: "Moonage Daydream", artist: "David Bowie", genre: "Rock" },
@@ -22,7 +22,7 @@ const songs = [
     { title: "I Heard It Through the Grapevine", artist: "Marvin Gaye", genre: "R&B" }
 ];
 
-// 2️⃣ Assign Preferences to Guardians
+// Assign Preferences to Guardians
 const guardians = {
     "Star-Lord": "Rock",
     "Gamora": "Pop",
@@ -31,7 +31,7 @@ const guardians = {
     "Groot": "R&B"
 };
 
-// 3️⃣ Generate Playlists Using `map()` and `.slice()`
+// Generate Playlists Using `map()` and `.slice()`
 function generatePlaylist(guardians, songs) {
     const playlistsDiv = document.getElementById("playlists");
     playlistsDiv.innerHTML = ""; // Clear existing content
@@ -44,7 +44,7 @@ function generatePlaylist(guardians, songs) {
 
         const filteredSongs = songs.filter(song => song.genre === genre).slice(0, songLimit);
 
-        // 4️⃣ Create Playlist Elements
+        // Create Playlist Elements
         const playlistDiv = document.createElement("div");
         playlistDiv.classList.add("playlist");
 
@@ -74,5 +74,5 @@ function generatePlaylist(guardians, songs) {
     });
 }
 
-// 5️⃣ Run and Test the Function
+// Run and Test the Function
 generatePlaylist(guardians, songs);
